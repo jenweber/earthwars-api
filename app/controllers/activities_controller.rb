@@ -56,6 +56,6 @@ class ActivitiesController < ApplicationController
 
     def activity_params
       # params[:activity] better to use below to see more info
-      params.require(:activity).permit(:name, :category, :value, :challenge)
+      params.require(:activity).permit(:name, :category, :value, :challenge, :user_id)
     end
 end
