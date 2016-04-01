@@ -1,0 +1,1 @@
+curl --include --request POST --header "Content-Type: application/json" -d '{ "activity": { "name": "turn off the light", "category":"none", "value": "5", "challenge":"false" } }' localhost:3000/activities

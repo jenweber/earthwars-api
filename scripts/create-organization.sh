@@ -1,0 +1,1 @@
+curl --include --request POST --header "Content-Type: application/json" -d '{ "organization": { "name": "The Krusty Krab", "contact": "Mr. Krabs", "goal": "save the ocean from global warming" } }' localhost:3000/organizations
