@@ -1,5 +1,5 @@
 # change to open read controller later in development
-class ActivitiesController < ApplicationController
+class ActivitiesController < OpenReadController
   before_action :set_activity, only: [:show, :update, :destroy]
 
   # GET /activities
@@ -19,8 +19,8 @@ class ActivitiesController < ApplicationController
   # POST /activities
   # POST /activities.json
   def create
-    @activity = Activity.new(activity_params)
-
+    # @activity = Activity.new(activity_params) unauthenticated Create
+    @activity = current_user.activities.build(activity_params)
     if @activity.save
       render json: @activity, status: :created, location: @activity
     else
