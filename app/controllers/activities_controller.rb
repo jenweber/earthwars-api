@@ -7,11 +7,10 @@ class ActivitiesController < ProtectedController
   def index
     if current_user.admin?
       @activities = Activity.all
-      p @activities
     else
       @activities = current_user.activities
-      render json: @activities
     end
+    render json: @activities
   end
 
   # GET /activities/1
