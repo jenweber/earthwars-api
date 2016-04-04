@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 20160401141004) do
     t.string   "token",           null: false
     t.string   "password_digest", null: false
     t.string   "name"
-    t.string   "admin"
+    t.boolean  "admin"
     t.integer  "organization_id"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false

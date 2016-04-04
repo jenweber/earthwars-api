@@ -4,10 +4,12 @@ curl --include --request POST http://localhost:3000/sign-up \
   --header "Content-Type: application/json" \
   --data '{
     "credentials": {
-      "email": "gat@gat.com",
-      "password": "password",
-      "password_confirmation": "password",
-      "organization_id":"1"
+      "name":"Admin",
+      "email": "admin1@admin.com",
+      "password": "admin",
+      "password_confirmation": "admin",
+      "organization_id":"1",
+      "admin":true
     }
   }'
 
