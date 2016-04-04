@@ -3,7 +3,7 @@ class CreateActivities < ActiveRecord::Migration
     create_table :activities do |t|
       t.string :name
       t.string :category
-      t.string :value
+      t.integer :value
       t.string :challenge
       t.references :user, index: true, foreign_key: true
       t.timestamps null: false
