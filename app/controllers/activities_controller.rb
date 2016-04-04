@@ -1,13 +1,16 @@
 # change to open read controller later in development
-class ActivitiesController < OpenReadController
+class ActivitiesController < ProtectedController
   before_action :set_activity, only: [:show, :update, :destroy]
 
   # GET /activities
   # GET /activities.json
   def index
-    @activities = Activity.all
-
-    render json: @activities
+    if current_user.admin?
+      @activities = Activity.all
+    else
+      @activities = current_user.activities
+      render json: @activities
+    end
   end
 
   # GET /activities/1
