@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20160401141004) do
   create_table "activities", force: :cascade do |t|
     t.string   "name"
     t.string   "category"
-    t.string   "value"
+    t.integer  "value"
     t.string   "challenge"
     t.integer  "user_id"
     t.datetime "created_at", null: false
