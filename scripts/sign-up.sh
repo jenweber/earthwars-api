@@ -8,7 +8,7 @@ curl --include --request POST http://localhost:3000/sign-up \
       "email": "admin5@admin.com",
       "password": "admin",
       "password_confirmation": "admin",
-      "organization_id":"2",
+      "organization_id":"1",
       "admin":true
     }
   }'

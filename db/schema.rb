@@ -22,10 +22,12 @@ ActiveRecord::Schema.define(version: 20160401141004) do
     t.integer  "value"
     t.string   "challenge"
     t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "organization_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
+  add_index "activities", ["organization_id"], name: "index_activities_on_organization_id", using: :btree
   add_index "activities", ["user_id"], name: "index_activities_on_user_id", using: :btree
 
   create_table "organizations", force: :cascade do |t|
@@ -51,6 +53,7 @@ ActiveRecord::Schema.define(version: 20160401141004) do
   add_index "users", ["organization_id"], name: "index_users_on_organization_id", using: :btree
   add_index "users", ["token"], name: "index_users_on_token", unique: true, using: :btree
 
+  add_foreign_key "activities", "organizations"
   add_foreign_key "activities", "users"
   add_foreign_key "users", "organizations"
 end

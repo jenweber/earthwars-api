@@ -5,8 +5,9 @@ class ActivitiesController < ProtectedController
   # GET /activities
   # GET /activities.json
   def index
-    if current_user.admin?
-      @activities = Activity.all
+    if current_user && current_user.admin?
+      @activities = current_user.organization.activities
+      # @activities = Activity.where("organization_id" => current_user.organization_id)
     else
       @activities = current_user.activities
     end
@@ -59,6 +60,6 @@ class ActivitiesController < ProtectedController
 
     def activity_params
       # params[:activity] better to use below to see more info
-      params.require(:activity).permit(:name, :category, :value, :challenge, :user_id)
+      params.require(:activity).permit(:name, :category, :value, :challenge, :user_id, :organization_id)
     end
 end
