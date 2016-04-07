@@ -1,3 +1,3 @@
 class ActivitySerializer < ActiveModel::Serializer
-  attributes :id, :name, :category, :value, :challenge, :user, :user_id, :organization_id, :organization
+  attributes :id, :name, :category, :value, :challenge, :user_id
 end
