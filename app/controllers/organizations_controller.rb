@@ -1,5 +1,5 @@
 # change to open read controller later in development
-class OrganizationsController < ApplicationController
+class OrganizationsController < OpenCreateController
   before_action :set_organization, only: [:show, :update, :destroy]
 
     # GET /organizations
