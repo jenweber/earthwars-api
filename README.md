@@ -1,6 +1,31 @@
 ### EarthWars API - a General Assembly capstone project by Jen Weber
 
+[Front End Repository on GitHub](https://github.com/jenweber/earthwars)
+[Deployed Site](http://jenweber.github.io/earthwars/)
+[API hosted on Heroku](https://earth-wars-api.herokuapp.com/)
+
 Your office or school is the battleground. At stake - Planet Earth itself. Who will prevail?
+
+The EarthWars API is built using Rails. It features admin authentication. The admin status of true or false controls from the back end which records a user can view. For example, a regular user sees only their own activities, whereas an admin sees the activities for all the users in their organization.
+
+Visit the [Front End Repository on GitHub](https://github.com/jenweber/earthwars) for more README details.
+
+### Organization
+
+| Verb   | URI Pattern            | Controller#Action      |
+|--------|------------------------|------------------------|
+| POST   | `/organizations`       | `organizations#create` |
+| GET    | `/organizations`       | `organizations#index`  |
+
+### Activities
+
+| Verb   | URI Pattern            | Controller#Action      |
+|--------|------------------------|------------------------|
+| POST   | `/activities`       | `activities#create` |
+| GET    | `/activities`       | `activities#index`  |
+| PATCH  | `/activities`       | `activities#update` |
+| DELETE | `/activities`       | `activities#destroy`|
+
 
 ### Authentication
 
