@@ -16,15 +16,16 @@ Visit the [Front End Repository on GitHub](https://github.com/jenweber/earthwars
 |--------|------------------------|------------------------|
 | POST   | `/organizations`       | `organizations#create` |
 | GET    | `/organizations`       | `organizations#index`  |
+| PATCH  | `/organizations/:id`   | `organizations#update` |
 
 ### Activities
 
-| Verb   | URI Pattern            | Controller#Action      |
-|--------|------------------------|------------------------|
+| Verb   | URI Pattern         | Controller#Action      |
+|--------|---------------------|------------------------|
 | POST   | `/activities`       | `activities#create` |
 | GET    | `/activities`       | `activities#index`  |
-| PATCH  | `/activities`       | `activities#update` |
-| DELETE | `/activities`       | `activities#destroy`|
+| PATCH  | `/activities/:id`   | `activities#update` |
+| DELETE | `/activities/:id`   | `activities#destroy`|
 
 
 ### Authentication
